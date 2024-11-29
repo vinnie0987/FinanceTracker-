@@ -1,0 +1,100 @@
+/* src/pages/register.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5; /* Soft light background */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Full-screen container for the register page */
+  .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Full screen height */
+    background: linear-gradient(135deg, #6a0dad, #8a2be2); /* Purple gradient background */
+    color: white;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Centered register form container */
+  .register-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px; /* Fixed width */
+    text-align: center;
+  }
+  
+  .register-container h1 {
+    font-size: 3.5rem; /* Large title */
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Adds depth to the title */
+  }
+  
+  /* Input styling */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .input-group input:focus {
+    border-color: #6a0dad;
+    outline: none;
+  }
+  
+  /* Register Button Styling */
+  .register-button {
+    background-color: #000000; /* Black button */
+    color: white;
+    font-size: 1.2rem; /* Button font size */
+    font-weight: 600;
+    padding: 12px 20px; /* Smaller button */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .register-button:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+  }
+  
+  .register-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Login link */
+  .login-link {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  .login-link a {
+    color: #8a2be2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    color: #6a0dad;
+  }
+  

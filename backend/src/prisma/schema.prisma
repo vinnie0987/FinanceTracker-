@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id             Int             @id @default(autoincrement())
+  username       String          @unique
+  email          String          @unique
+  passwordHash   String
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  deletedAt      DateTime?
+  financialGoals FinancialGoal[]
+}
+
+model FinancialGoal {
+  id            Int        @id @default(autoincrement())
+  user          user       @relation(fields: [userId], references: [id])
+  userId        Int
+  title         String
+  targetAmount  Float      // Ensure targetAmount > 0 in your application logic
+  currentAmount Float      @default(0) // Ensure currentAmount >= 0 in your application logic
+  dueDate       DateTime?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  deletedAt     DateTime?
+  progresses    Progress[]
+
+  @@index([userId])
+}
+
+model Progress {
+  id              Int           @id @default(autoincrement())
+  financialGoal   FinancialGoal @relation(fields: [financialGoalId], references: [id])
+  financialGoalId Int
+  amount          Float         // Ensure amount > 0 in your application logic
+  recordedAt      DateTime      @default(now())
+
+  @@index([financialGoalId])
+}

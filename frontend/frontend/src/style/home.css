@@ -1,0 +1,123 @@
+/* Layout styling */
+.home-layout {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "content sidebar";
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  width: 100vw;
+  background: #f7f9fc; /* Light blue background for the page */
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  background: #1e88e5; /* Blue for the header background */
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff; /* White text for contrast */
+}
+
+.header-item {
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+}
+
+.main-content {
+  grid-area: content;
+}
+
+.upcoming-deadlines,
+.all-goals {
+  margin-bottom: 20px;
+}
+
+.upcoming-deadlines ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.goal-item {
+  border: 1px solid #cfd8dc; /* Soft gray border */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #fff; /* White background for goals */
+  transition: transform 0.2s ease;
+}
+
+.goal-item:hover {
+  transform: scale(1.02); /* Slight hover effect for interactivity */
+}
+
+.goal-item h4 {
+  margin: 0;
+  color: #2e7d32; /* Dark green for goal titles */
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  background: #1e88e5; /* Blue buttons for actions */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background: #1565c0; /* Darker blue on hover */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #e3f2fd; /* Light blue for sidebar background */
+  padding: 10px;
+  border-radius: 8px;
+  color: #37474f; /* Dark gray for sidebar text */
+}
+
+.add-goal {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #43a047; /* Green for "Add Goal" button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-goal:hover {
+  background: #2e7d32; /* Darker green on hover */
+}
+
+.progress-bar-container {
+  margin-top: 20px;
+}
+
+.progress-bar-wrapper {
+  background: #cfd8dc; /* Light gray for the progress bar background */
+  height: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #43a047; /* Green progress indicator */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}

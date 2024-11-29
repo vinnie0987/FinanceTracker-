@@ -1,0 +1,146 @@
+/* src/pages/LandingPage.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #F5F5F5; /* Soft light background */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Full-screen container for the landing page */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  background: linear-gradient(135deg, #6a0dad, #8a2be2); /* Purple gradient background */
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Title Section */
+.landing-page h1 {
+  font-size: 3.5rem; /* Adjusted to the previous good size */
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Adds depth to the title */
+  max-width: 90%;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* Subtitle Section */
+.landing-page p {
+  font-size: 1.2rem; /* Slightly larger text */
+  color: #e3e3e3;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+/* Button Styling */
+.landing-page .cta-button,
+.landing-page .login-button {
+  background-color: #000000; /* Black buttons for a sleek look */
+  color: white;
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: 600;
+  padding: 12px 25px; /* Small but clear buttons */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  margin: 15px;
+  width: 220px; /* Fixed button width */
+  max-width: 90%;
+}
+
+.landing-page .cta-button:hover,
+.landing-page .login-button:hover {
+  background-color: #333333;
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.landing-page .cta-button:active,
+.landing-page .login-button:active {
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/* Features Section */
+.features-section {
+  background-color: #000000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.features-section h2 {
+  font-size: 2rem; /* Moderate font size */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.features-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer Section */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #e3e3e3;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.footer a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #6a0dad;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .landing-page h1 {
+    font-size: 2.5rem; /* Slightly smaller on mobile */
+  }
+
+  .landing-page p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cta-button,
+  .login-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 180px;
+  }
+
+  .features-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .features-section p {
+    font-size: 0.9rem;
+  }
+}
